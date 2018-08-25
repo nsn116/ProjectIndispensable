@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.projectindispensable.projectindispensable">
+
+    <uses-sdk tools:overrideLibrary="android.support.v17.leanback" />
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--<uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="18" />
+
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="ocr" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Medify"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Medify">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Medify.Launcher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="Login"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectindispensable.projectindispensable.MainActivity" />
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="Register"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.projectindispensable.projectindispensable.MainActivity" />
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="Home" />
+        <activity
+            android:name=".ScanMedicationActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="Scan Medication" />
+        <activity
+            android:name=".MedicationActivity"
+            android:label="Medication" />
+        <activity
+            android:name=".AccountActivity"
+            android:label="My Account" />
+      <activity android:name=".ScanPrescriptionActivity" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.android.fileprovider"
+            android:exported="false"
+            android:enabled="true"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <activity
+            android:name=".AddMedicationActivity"
+            android:label="Add Medication" />
+        <activity
+            android:name=".OCRActivity"
+            android:label="Medify" />
+
+        <meta-data
+            android:name="net.hockeyapp.android.appIdentifier"
+            android:value="${HOCKEYAPP_APP_ID}" />
+
+        <activity
+            android:name=".NotificationActivity"
+            android:label="Medify" />
+        <activity
+            android:name=".EditActivity"
+            android:label="Medify" />
+
+        <receiver android:name=".NotificationReciever" />
+
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity" />
+        <activity
+            android:name=".CropActivity"
+            android:label="Medify" />
+        <activity
+            android:name=".MatchActivity"
+            android:label="Medify" />
+        <activity
+            android:name=".MismatchActivity"
+            android:label="Medify" />
+        <activity android:name=".EditAccountActivity"></activity>
+        <activity android:name=".ErrorActivity"></activity>
+    </application>
+
+</manifest>

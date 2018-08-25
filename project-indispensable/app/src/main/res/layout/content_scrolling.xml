@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_marginTop="@dimen/activity_horizontal_margin"
+  android:padding="@dimen/activity_horizontal_margin"
+  app:layout_behavior="@string/appbar_scrolling_view_behavior"
+  tools:context="com.projectindispensable.projectindispensable.NotificationActivity"
+  tools:showIn="@layout/activity_notification">
+
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+      <TextView
+        android:id="@+id/med_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/quicksand_bold"
+        android:gravity="center"
+        android:textSize="35sp"
+        />
+      <TextView
+        android:id="@+id/person_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="10dp"
+        android:fontFamily="@font/quicksand_regular"
+        android:gravity="center"
+        android:textSize="25sp"
+        />
+      <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp">
+
+        <TextView
+          android:id="@+id/dosage"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:fontFamily="@font/quicksand_regular"
+          android:text="Dosage"
+          android:textSize="20sp"
+          />
+
+        <TextView
+          android:id="@+id/dos"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:textSize="15sp"
+          />
+      </RelativeLayout>
+
+      <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp">
+      <TextView
+        android:id="@+id/start_date"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="@font/quicksand_regular"
+        android:text="Start Date"
+        android:textSize="20sp"
+        />
+
+      <TextView
+        android:id="@+id/start_date_notif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="15sp"
+        />
+      </RelativeLayout>
+
+      <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp">
+      <TextView
+        android:id="@+id/time"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="@font/quicksand_regular"
+        android:text="Time"
+        android:textSize="20sp"
+        />
+
+      <TextView
+        android:id="@+id/time_notif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="15sp"
+        />
+      </RelativeLayout>
+
+      <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="10dp">
+      <TextView
+        android:id="@+id/num_days"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="@font/quicksand_regular"
+        android:text="Number Of Days"
+        android:textSize="20sp"
+        />
+
+      <TextView
+        android:id="@+id/num_days_notif"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:textSize="15sp"
+        />
+      </RelativeLayout>
+
+      <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+        <TextView
+          android:id="@+id/notes_id"
+          android:textStyle="bold"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:fontFamily="@font/quicksand_regular"
+          android:text="Notes"
+          android:textSize="20sp"
+          />
+
+        <TextView
+          android:id="@+id/notes_notif"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentRight="true"
+          android:textSize="15sp"
+          />
+      </RelativeLayout>
+
+      <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="20dp">
+      <TextView
+        android:id="@+id/reminders"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="@font/quicksand_regular"
+        android:text="Reminders"
+        android:textSize="20sp"
+        />
+
+      <Switch
+        android:id="@+id/toggle_switch"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:fontFamily="@font/quicksand_regular"
+        android:textSize="20sp"/>
+      </RelativeLayout>
+
+    </LinearLayout>
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <Button
+        android:id="@+id/edit_medication"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/round_button"
+        android:onClick="editFromDatabase"
+        android:text="EDIT"
+        android:textColor="#FFF"/>
+
+    </LinearLayout>
+  </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

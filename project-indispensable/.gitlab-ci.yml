@@ -1,0 +1,29 @@
+stages:
+  - build
+  - test
+  - deploy
+
+build:
+  stage: build
+  script:
+    - echo sdk.dir=/usr/local/android-studio/sdk > local.properties
+    - gradle wrapper --gradle-distribution-url https\://services.gradle.org/distributions/gradle-4.4-bin.zip
+    - ./gradlew clean assembleDebug
+
+test:
+  stage: test
+  script:
+    - echo sdk.dir=/usr/local/android-studio/sdk > local.properties
+    - gradle wrapper --gradle-distribution-url https\://services.gradle.org/distributions/gradle-4.4-bin.zip
+    - ./gradlew test
+
+deploy:
+  stage: deploy
+  only:
+    - master
+  script:
+    - echo sdk.dir=/usr/local/android-studio/sdk > local.properties
+    - gradle wrapper --gradle-distribution-url https\://services.gradle.org/distributions/gradle-4.4-bin.zip
+    - ./gradlew assembleRelease
+    - chmod +x ./deploy.sh
+    - ./deploy.sh

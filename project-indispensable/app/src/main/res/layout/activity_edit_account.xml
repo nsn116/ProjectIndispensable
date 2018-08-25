@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context="com.projectindispensable.projectindispensable.EditAccountActivity">
+  <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+    <ImageButton
+      android:id="@+id/profile_picture"
+      android:layout_width="100dp"
+      android:layout_height="100dp"
+      android:contentDescription="TODO"
+      app:srcCompat="@drawable/ic_person_black_24dp"/>
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:gravity="center_horizontal">
+    <EditText
+      android:id="@+id/first_name"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="First Name"
+      android:textSize="25sp"/>
+    <EditText
+      android:id="@+id/last_name"
+      android:textStyle="bold"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:gravity="center"
+      android:text="Last Name"
+      android:textSize="25sp"/>
+    </LinearLayout>
+    <Button
+      android:id="@+id/save_account"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:background="@drawable/round_button"
+      android:text="Save"
+      android:textColor="#FFF"/>
+  </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
